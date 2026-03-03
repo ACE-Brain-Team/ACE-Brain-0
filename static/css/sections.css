@@ -1,0 +1,154 @@
+/* Footer Improvements */
+.footer {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 1.5rem;
+}
+
+.footer .content {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* BibTeX Styling */
+pre {
+  background: var(--background-accent) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 1.5rem !important;
+  font-size: 0.9rem !important;
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+code {
+  background: var(--background-accent) !important;
+  color: var(--text-primary) !important;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace !important;
+}
+
+.bibtex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.copy-bibtex-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copy-bibtex-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.copy-bibtex-btn.copied {
+  background: #10b981;
+}
+
+.copy-bibtex-btn.copied .copy-text::after {
+  content: "ied!";
+}
+
+/* Benchmark Table Styles */
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.table {
+  margin-bottom: 0;
+  background: var(--background-primary);
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+  background: var(--background-secondary);
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even):hover {
+  background: var(--background-accent);
+}
+
+.table th {
+  background-color: var(--background-secondary);
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.table td, .table th {
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.table tr:hover {
+  background-color: var(--background-accent) !important;
+}
+
+.benchmark-notes {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--background-secondary);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+}
+
+.benchmark-notes h4 {
+  margin-top: 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.benchmark-notes ul {
+  margin-bottom: 0;
+}
+
+.benchmark-notes li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Print styles */
+@media print {
+  .more-works-container {
+    display: none;
+  }
+
+  .hero, .section {
+    animation: none;
+  }
+
+  .button {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+    box-shadow: none !important;
+  }
+}

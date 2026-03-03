@@ -1,0 +1,84 @@
+/* Keyframe Definitions */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0%   { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.2); }
+  70%  { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+/* Animation classes */
+.hero, .section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.publication-title {
+  animation: slideInLeft 0.8s var(--animation-ease);
+}
+
+.publication-authors {
+  animation: slideInRight 0.8s var(--animation-ease);
+  animation-delay: 0.2s;
+}
+
+.publication-links {
+  animation: fadeIn 0.6s ease-out;
+  animation-delay: 0.4s;
+}
+
+.results-carousel {
+  animation: fadeInUp 0.8s ease-out;
+  animation-delay: 0.6s;
+}
+
+.button:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+.copy-bibtex-btn:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+.publication-banner img:hover,
+.publication-video:hover {
+  animation: glow 1.5s ease-in-out;
+}
+
+/* Staggered animations */
+[data-animation="stagger"] {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+[data-animation="stagger"]:nth-child(1) { animation-delay: 0.1s; }
+[data-animation="stagger"]:nth-child(2) { animation-delay: 0.2s; }
+[data-animation="stagger"]:nth-child(3) { animation-delay: 0.3s; }
+[data-animation="stagger"]:nth-child(4) { animation-delay: 0.4s; }
+[data-animation="stagger"]:nth-child(5) { animation-delay: 0.5s; }

@@ -1,0 +1,241 @@
+/* Enhanced Button Styles with Tech Feel */
+.button {
+  border-radius: var(--border-radius) !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
+  border: 2px solid transparent !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: var(--background-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-tech);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover::before {
+  opacity: 0.1;
+}
+
+.button.is-dark {
+  background: var(--text-primary) !important;
+  border: none !important;
+  color: white !important;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.button.is-dark::before {
+  background: var(--gradient-primary);
+}
+
+.button.is-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: var(--primary-color) !important;
+}
+
+.button.is-dark:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+/* Enhanced link styles with hover effects */
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-accent);
+  transition: width 0.3s ease;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+/* Tech-inspired card hover effect */
+.card-hover {
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-tech);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card-hover:hover::before {
+  opacity: 0.05;
+}
+
+/* Interactive section headers */
+.section-header {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-accent);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.section-header:hover::after {
+  width: 100px;
+  background: var(--gradient-tech);
+}
+
+/* Enhanced author link hover effect */
+.author-link {
+  position: relative;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.author-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-accent);
+  transition: var(--transition);
+}
+
+.author-link:hover {
+  color: var(--accent-color);
+}
+
+.author-link:hover::after {
+  width: 100%;
+}
+
+/* Interactive footer links */
+.footer-link {
+  position: relative;
+  display: inline-block;
+  transition: var(--transition);
+  padding: 0.25rem 0;
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+.footer-link:hover::before {
+  width: 100%;
+}
+
+/* Glowing effect for important elements */
+.glow-element {
+  position: relative;
+}
+
+.glow-element::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: var(--gradient-tech);
+  border-radius: var(--border-radius);
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-element:hover::after {
+  opacity: 0.3;
+}
+
+.footer .icon-link {
+  font-size: 25px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.footer .icon-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.link-block a {
+  margin: 8px 4px;
+}
+
+/* Keep publication buttons vertically centered even with footer-link class */
+.publication-links .button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.publication-links .button .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+/* Improved focus states for accessibility */
+.button:focus,
+.related-works-btn:focus,
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
