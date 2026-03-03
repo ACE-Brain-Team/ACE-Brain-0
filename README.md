@@ -5,7 +5,7 @@
   <br>
 </div>
 
-# ACE-Brain: A Spatial-Centric Foundation Brain for Universal Embodiments
+# ACE-Brain-0: Spatial Intelligence as a Shared Scaffold for Universal Embodiments
 
 
 <p align="center">
@@ -48,9 +48,9 @@
 
 <a id="introduction"></a>
 ## 🧠 Introduction
-**ACE-Brain** is the first spatial-centric generalist brain that unifies **spatial cognition**, **autonomous driving**, **low-altitude sensing**, and **embodied interaction** within a single multi-modal large language model (MLLM). 
+**ACE-Brain-0** is the first spatial-centric generalist brain that unifies **spatial cognition**, **autonomous driving**, **low-altitude sensing**, and **embodied interaction** within a single multi-modal large language model (MLLM). 
 
-Unlike traditional joint training that suffers from gradient interference or sequential training that incurs catastrophic forgetting, ACE-Brain introduces the **Scaffold-Specialize-Reconcile (SSR)** paradigm—establishing spatial intelligence as the universal bridge across heterogeneous embodiments.
+Unlike traditional joint training that suffers from gradient interference or sequential training that incurs catastrophic forgetting, ACE-Brain-0 introduces the **Scaffold-Specialize-Reconcile (SSR)** paradigm—establishing spatial intelligence as the universal bridge across heterogeneous embodiments.
 
 <a id="key-features"></a>
 ## 🔥 Key Features
@@ -61,7 +61,7 @@ Unlike traditional joint training that suffers from gradient interference or seq
 <a id="method-architecture"></a>
 ## 🏗️ Method & Architecture
 
-ACE-Brain uses a unified vision-language autoregressive architecture: visual inputs (single image / multi-view images / video) are encoded by a **Vision Encoder + MLP Projector** into visual tokens and fed together with text instructions into the **LLM Decoder** for autoregressive generation. Training follows five stages: first building a **spatial scaffold** (Spatial Expert), then training **AD and UAV domain experts** separately, reconciling them via **data-free model merging** (e.g., WUDI) into a single model, and finally **embodied SFT** with optional **GRPO** reinforcement learning.
+ACE-Brain-0 uses a unified vision-language autoregressive architecture: visual inputs (single image / multi-view images / video) are encoded by a **Vision Encoder + MLP Projector** into visual tokens and fed together with text instructions into the **LLM Decoder** for autoregressive generation. Training follows five stages: first building a **spatial scaffold** (Spatial Expert), then training **AD and UAV domain experts** separately, reconciling them via **data-free model merging** (e.g., WUDI) into a single model, and finally **embodied SFT** with optional **GRPO** reinforcement learning.
 
 <!-- Architecture / training pipeline figure: use assets/architecture.png, e.g. paper Figure 3 or training flow -->
 <p align="center">
@@ -71,9 +71,9 @@ ACE-Brain uses a unified vision-language autoregressive architecture: visual inp
 <a id="performance-highlights"></a>
 ## 📊 Performance Highlights
 
-ACE-Brain-8B achieves superior performance across four domains:
+ACE-Brain-0-8B achieves superior performance across four domains:
 
-| Domain | Benchmark | ACE-Brain-8B | Best Baseline | Delta |
+| Domain | Benchmark | ACE-Brain-0-8B | Best Baseline | Delta |
 |:------:|:---------:|:------------:|:-------------:|:-----:|
 | **Spatial** | SAT | **92.0** | 79.3 (Gemini-2.5-Pro) | **+12.7** |
 | **Spatial** | MindCube | **82.1** | 52.2 (Gemini-2.5-Pro) | **+29.9** |
@@ -118,11 +118,11 @@ from PIL import Image
 
 # Load model
 model = AutoModelForCausalLM.from_pretrained(
-    "ACE-Brain/ACE-Brain-8B",
+    "ACE-Brain/ACE-Brain-0-8B",
     torch_dtype="auto",
     device_map="auto"
 )
-tokenizer = AutoTokenizer.from_pretrained("ACE-Brain/ACE-Brain-8B")
+tokenizer = AutoTokenizer.from_pretrained("ACE-Brain/ACE-Brain-0-8B")
 
 # Multi-view autonomous driving example
 images = [Image.open(f"view_{i}.jpg") for i in range(6)]  # Surround-view cameras
@@ -136,7 +136,7 @@ print(response)  # "The black vehicle will keep going straight."
 <a id="roadmap"></a>
 ## 🗓️ Roadmap
 PRs welcome! 🤗
-- [√] **ACE-Brain v1.0**: SSR paradigm with 4-domain unification
+- [√] **ACE-Brain-0 v1.0**: SSR paradigm with 4-domain unification
 <!-- - [ ] **ACE-Brain-VLA**: Continuous visuomotor policy generation (diffusion/flow-matching)
 - [ ] **ACE-Brain 2.0**: Physics-infused continuous cognition with sub-pixel metric localization
 - [ ] **Meta-Embodiment**: Few-shot adaptation to novel robot morphologies via scaffold alignment -->
@@ -144,7 +144,7 @@ PRs welcome! 🤗
 <a id="citation"></a>
 ## 📖 Citation
 
-If you find ACE-Brain useful for your research and applications, please consider citing:
+If you find ACE-Brain-0 useful for your research and applications, please consider citing:
 
 ```bibtex
 @article{gong2026acebrain,
