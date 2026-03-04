@@ -147,11 +147,14 @@ PRs welcome! 🤗
 If you find ACE-Brain-0 useful for your research and applications, please consider citing:
 
 ```bibtex
-@article{gong2026acebrain,
-  title={ACE-Brain: A Spatial-Centric Foundation Brain for Universal Embodiments},
-  author={Gong, Ziyang and Luo, Zehang and Tang, Anke and Liu, Zhe and others},
-  journal={arXiv preprint arXiv:2603.03198},
-  year={2026}
+@misc{gong2026acebrain0spatialintelligenceshared,
+      title={ACE-Brain-0: Spatial Intelligence as a Shared Scaffold for Universal Embodiments}, 
+      author={Ziyang Gong and Zehang Luo and Anke Tang and Zhe Liu and Shi Fu and Zhi Hou and Ganlin Yang and Weiyun Wang and Xiaofeng Wang and Jianbo Liu and Gen Luo and Haolan Kang and Shuang Luo and Yue Zhou and Yong Luo and Li Shen and Xiaosong Jia and Yao Mu and Xue Yang and Chunxiao Liu and Junchi Yan and Hengshuang Zhao and Dacheng Tao and Xiaogang Wang},
+      year={2026},
+      eprint={2603.03198},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2603.03198}, 
 }
 ```
 
