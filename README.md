@@ -180,7 +180,7 @@ If you find ACE-Brain-0 useful for your research and applications, please consid
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2603.03198}, 
 }
-```
+``` 
 
 <a id="acknowledgements"></a>
 ## 🙏 Acknowledgements
